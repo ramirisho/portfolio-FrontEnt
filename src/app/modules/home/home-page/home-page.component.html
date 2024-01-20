@@ -1,0 +1,211 @@
+<main class="px-5 pb-20 md:px-8">
+    <section class="flex justify-center items-center h-[100dvh]">
+        <div class="flex flex-col items-center space-y-8 md:flex-row-reverse md:space-y-0 md:justify-center md:items-center">
+            <img src="../../../../assets/foto-de-perfil.jpg" alt="Foto de perfil" class="h-40 w-40 rounded-full md:w-56 md:h-56 md:ml-10 lg:h-64 lg:w-64">
+    
+            <div class="space-y-8 flex flex-col items-center md:items-start">
+                <div class="flex flex-col items-center text-center space-y-2 md:items-start md:text-start">
+                    <span class="text-xl font-bold text-slate-50">
+                        Ramiro Solano
+                    </span>
+        
+                    <h1 class="text-3xl font-extrabold w-max sm:text-4xl lg:text-6xl">
+                        <span class="bg-gradient-to-r from-sky-400 to-sky-600 flex text-transparent bg-clip-text">
+                            Frontend Developer
+                        </span>
+                    </h1>
+        
+                    <p class="text-slate-100 text-sm max-w-80">
+                        Entusiasta de la tecnología, brindo servicios para potenciar la presencia online de personas y empresas desarrollando sitios web.
+                    </p>
+                </div>
+        
+                <button (click)="scroollToContat()" aria-label="Ver contacto" class="h-12 w-80 text-slate-50 font-semibold bg-sky-500 rounded-xl hover:bg-sky-400">
+                    Ver contacto
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="space-y-12 mb-32">
+        <div class="space-y-4">
+            <h2 class="font-semibold text-sky-400 sm:text-lg sm:font-bold">
+                Proyectos
+            </h2>
+        
+            <p class="text-3xl font-extrabold text-slate-50">
+                Mi experiencia como desarrollador
+            </p>
+    
+            <p class="text-slate-100 text-pretty max-w-3xl">
+                Colección que engloba tanto proyectos profesionales que he llevado a cabo en el ámbito laboral como iniciativas personales que emprendí por mi cuenta.
+            </p>
+        </div>
+
+        <div class="flex flex-col"> 
+            <article class="bg-slate-800/80 p-6 rounded-3xl hover:bg-slate-700/50 space-y-6 max-w-96">
+                <img class="w-full rounded-lg" src="../../../../assets/blueskymobiles-website.jpg" alt="Blueskymobiles Sitio Web">
+            
+                <div>
+                    <div class="flex space-x-1 [&>h2]:hover:text-sky-500 [&>svg]:hover:fill-sky-500">
+                        <h2 class="text-slate-50">
+                            Bluesky Mobiles
+                        </h2>
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-slate-50">
+                            <path d="M12.232 4.232a2.5 2.5 0 0 1 3.536 3.536l-1.225 1.224a.75.75 0 0 0 1.061 1.06l1.224-1.224a4 4 0 0 0-5.656-5.656l-3 3a4 4 0 0 0 .225 5.865.75.75 0 0 0 .977-1.138 2.5 2.5 0 0 1-.142-3.667l3-3Z" />
+                            <path d="M11.603 7.963a.75.75 0 0 0-.977 1.138 2.5 2.5 0 0 1 .142 3.667l-3 3a2.5 2.5 0 0 1-3.536-3.536l1.225-1.224a.75.75 0 0 0-1.061-1.06l-1.224 1.224a4 4 0 1 0 5.656 5.656l3-3a4 4 0 0 0-.225-5.865Z" />
+                          </svg>                                                                            
+                    </div>
+
+                    <p class="text-slate-400">
+                        Sitio web para una tienda de reparación de celulares.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+    <section class="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-center mb-32">
+        <div class="space-y-4">
+            <h2 class="text-slate-100 text-4xl font-bold">
+                Sobre mí
+            </h2>
+    
+            <p class="text-slate-200 text-pretty">
+                Estudiante de Ing en Sistemas y desarrollo web, me especializo en tecnologías como Angular, TypeScript, y Tailwind CSS para crear sitios webs. Uso Figma para diseño y prototipado.
+            </p>
+        </div>
+
+        <div class="rounded-xl overflow-hidden">
+           <ul class="grid grid-cols-2 gap-2">
+
+               @for(logo of logos; track $index) {
+                    <li class="flex space-x-2 items-center justify-center bg-slate-800 h-14 opacity-100">
+                        <img [src]="logo.src" [alt]="logo.name+' logo'">
+
+                        <span class="text-base text-slate-200">{{logo.name}}</span>
+                    </li>
+                }
+                
+           </ul>
+        </div>
+    </section>
+
+
+    <section class="space-y-16 mb-32">
+        <div class="space-y-4">
+            <h2 class="font-semibold text-sky-400 sm:text-lg sm:font-bold">
+                Precios
+            </h2>
+        
+            <p class="text-3xl font-extrabold text-slate-50">
+                Descubrí la oferta perfecta para vos
+            </p>
+    
+            <p class="text-slate-100">
+                Explora mis propuestas y elegí el paquete que mejor se ajuste a tus objetivos.
+            </p>
+        </div>
+
+        <div class="space-y-8 flex flex-col items-center lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8 lg:items-start">
+            @for (offer of offers; track $index) {
+                <article [ngClass]=" $last || $first ?
+                    'border border-slate-600/50 p-8 rounded-3xl space-y-4 max-w-[350px] sw-full' :
+                    'border-2 border-sky-500 p-8 rounded-3xl space-y-4 max-w-[350px] aw-full'
+                ">
+                    <div class=" flex items-center justify-between text-slate-50">
+                        <h3 class="text-lg font-bold ">
+                            {{offer.title}}
+                        </h3>
+
+                        @if ( !($last || $first) ) {
+                            <span class="bg-sky-500 rounded-full px-2 py-1 text-sm font-bold">
+                                Mejor opción 
+                            </span>
+                        }
+                    </div>         
+    
+                    <p class="text-slate-100">
+                        {{offer.description}}
+                    </p>
+    
+                    <div>
+                        <div>
+                            <span class="text-4xl font-bold text-slate-50">
+                                {{offer.price}}
+                            </span>
+                            
+                            <span class="text- font-smibold text-slate-50">
+                                {{offer.currency}}
+                            </span>
+                        </div>
+                        
+                        <p class="text-sm text-slate-100">
+                            {{offer.currencyDetail}}
+                        </p>
+                    </div>
+    
+                    <button (click)="scroollToContat()" aria-label="Ver contacto"
+                    [ngClass]=" $last || $first ?
+                        'bg-slate-600 w-full py-2 flex justify-center items-center rounded-xl hover:bg-slate-500' :
+                        'bg-sky-500 w-full py-2 flex justify-center items-center rounded-xl hover:bg-sky-400'
+                    ">
+                        <span class="text-slate-50 text-2xl font-bold">
+                            Contactar
+                        </span>
+                    </button>
+    
+                    <div class="flex space-x-3">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 6V12H16.5M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                        <p class="text-slate-100">
+                            {{offer.delivery}}
+                        </p>
+                    </div>
+
+                    @for (item of offer.details; track $index) {
+                        <div class="flex space-x-3">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.7086 7.29297C19.0992 7.68359 19.0992 8.31797 18.7086 8.70859L10.7086 16.7086C10.318 17.0992 9.68359 17.0992 9.29297 16.7086L5.29297 12.7086C4.90234 12.318 4.90234 11.6836 5.29297 11.293C5.68359 10.9023 6.31797 10.9023 6.70859 11.293L10.0023 14.5836L17.2961 7.29297C17.6867 6.90234 18.3211 6.90234 18.7117 7.29297H18.7086Z" fill="white"/>
+                            </svg>
+
+                            <p class="text-slate-100">
+                                {{item}}
+                            </p>
+                        </div>
+                    }
+                </article>
+            }
+        </div>
+    </section>
+
+
+    <section #contactSection class="space-y-10 mb-32">
+        <div class="space-y-4">
+            <h2 class="text-3xl font-extrabold text-slate-50">
+                Contacto y redes sociales
+            </h2>
+    
+            <p class="text-slate-100">
+                No dudes en escribirme si tenés alguna duda sobre mis servicios o por contratación.
+            </p>
+        </div>
+
+        <div class="flex flex-col space-y-4 text-slate-100">
+            @for (contact of contactLinks; track $index) {
+                <a [href]="contact.link" class="border border-slate-100 w-max h-10 px-3 rounded-2xl flex items-center space-x-2 hover:border-sky-500 hover:text-sky-500">
+                    <img [src]="contact.icon" [alt]="contact.ariaLabel">
+
+                    <span>
+                        {{contact.text}}
+                    </span>
+                </a>
+            }
+        </div>
+    </section>
+</main>
