@@ -1,26 +1,24 @@
 <main class="px-5 pb-20 md:px-8">
-    <section class="flex justify-center items-center h-[100dvh]">
+    <section class="flex justify-center items-center h-screen">
         <div class="flex flex-col items-center space-y-8 md:flex-row-reverse md:space-y-0 md:justify-center md:items-center">
-            <img src="../../../../assets/foto-de-perfil.jpg" alt="Foto de perfil" class="h-40 w-40 rounded-full md:w-56 md:h-56 md:ml-10 lg:h-64 lg:w-64">
+            <img src="../../../../assets/foto-de-perfil.jpg" alt="Foto de perfil" class="h-40 w-40 rounded-full md:w-56 md:h-56 md:ml-10 lg:h-64 lg:w-64 animate-fade-up animate-duration-700 animate-ease-out">
     
             <div class="space-y-8 flex flex-col items-center md:items-start">
                 <div class="flex flex-col items-center text-center space-y-2 md:items-start md:text-start">
-                    <span class="text-xl font-bold text-slate-50">
+                    <span class="text-xl font-bold text-slate-50 animate-fade-up animate-delay-75 animate-duration-700 animate-ease-out">
                         Ramiro Solano
                     </span>
         
-                    <h1 class="text-3xl font-extrabold w-max sm:text-4xl lg:text-6xl">
-                        <span class="bg-gradient-to-r from-sky-400 to-sky-600 flex text-transparent bg-clip-text">
-                            Frontend Developer
-                        </span>
+                    <h1 class="text-3xl text-transparent font-extrabold w-max sm:text-4xl lg:text-6xl bg-gradient-to-r from-sky-400 to-sky-600 bg-clip-text animate-fade-up animate-delay-100 animate-duration-700 animate-ease-out">
+                        Frontend Developer
                     </h1>
         
-                    <p class="text-slate-100 text-sm max-w-80">
+                    <p class="text-slate-100 text-sm max-w-80 animate-fade-up animate-delay-150 animate-duration-700 animate-ease-out">
                         Entusiasta de la tecnología, brindo servicios para potenciar la presencia online de personas y empresas desarrollando sitios web.
                     </p>
                 </div>
         
-                <button (click)="scroollToContat()" aria-label="Ver contacto" class="h-12 w-80 text-slate-50 font-semibold bg-sky-500 rounded-xl hover:bg-sky-400">
+                <button (click)="scroollToContat()" aria-label="Ver contacto" class="h-12 w-80 text-slate-50 font-semibold bg-sky-500 rounded-xl hover:bg-sky-400 animate-fade-up animate-delay-200 animate-duration-700 animate-ease-out">
                     Ver contacto
                 </button>
             </div>
